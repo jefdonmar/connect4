@@ -17,6 +17,92 @@ var _moment2 = _interopRequireDefault(_moment);
 
 console.log('Hello, World');
 
+// JavaScript Document
+(0, _jquery2['default'])(document).ready(function () {
+  var x = 'x';
+  var o = 'o';
+  var count = 0;
+  var oWin = 0;
+  var xWin = 0;
+  (0, _jquery2['default'])('#game li').click(function () {
+
+    if ((0, _jquery2['default'])('#one').hasClass('o') && (0, _jquery2['default'])('#two').hasClass('o') && (0, _jquery2['default'])('#three').hasClass('o') || (0, _jquery2['default'])('#four').hasClass('o') && (0, _jquery2['default'])('#five').hasClass('o') && (0, _jquery2['default'])('#six').hasClass('o') || (0, _jquery2['default'])('#seven').hasClass('o') && (0, _jquery2['default'])('#eight').hasClass('o') && (0, _jquery2['default'])('#nine').hasClass('o') || (0, _jquery2['default'])('#one').hasClass('o') && (0, _jquery2['default'])('#four').hasClass('o') && (0, _jquery2['default'])('#seven').hasClass('o') || (0, _jquery2['default'])('#two').hasClass('o') && (0, _jquery2['default'])('#five').hasClass('o') && (0, _jquery2['default'])('#eight').hasClass('o') || (0, _jquery2['default'])('#three').hasClass('o') && (0, _jquery2['default'])('#six').hasClass('o') && (0, _jquery2['default'])('#nine').hasClass('o') || (0, _jquery2['default'])('#one').hasClass('o') && (0, _jquery2['default'])('#five').hasClass('o') && (0, _jquery2['default'])('#nine').hasClass('o') || (0, _jquery2['default'])('#three').hasClass('o') && (0, _jquery2['default'])('#five').hasClass('o') && (0, _jquery2['default'])('#seven').hasClass('o')) {
+      alert('O has won the game. Start a new game');
+      (0, _jquery2['default'])('#game li').text('+');
+      (0, _jquery2['default'])('#game li').removeClass('disable');
+      (0, _jquery2['default'])('#game li').removeClass('o');
+      (0, _jquery2['default'])('#game li').removeClass('x');
+      (0, _jquery2['default'])('#game li').removeClass('btn-primary');
+      (0, _jquery2['default'])('#game li').removeClass('btn-info');
+    } else if ((0, _jquery2['default'])('#one').hasClass('x') && (0, _jquery2['default'])('#two').hasClass('x') && (0, _jquery2['default'])('#three').hasClass('x') || (0, _jquery2['default'])('#four').hasClass('x') && (0, _jquery2['default'])('#five').hasClass('x') && (0, _jquery2['default'])('#six').hasClass('x') || (0, _jquery2['default'])('#seven').hasClass('x') && (0, _jquery2['default'])('#eight').hasClass('x') && (0, _jquery2['default'])('#nine').hasClass('x') || (0, _jquery2['default'])('#one').hasClass('x') && (0, _jquery2['default'])('#four').hasClass('x') && (0, _jquery2['default'])('#seven').hasClass('x') || (0, _jquery2['default'])('#two').hasClass('x') && (0, _jquery2['default'])('#five').hasClass('x') && (0, _jquery2['default'])('#eight').hasClass('x') || (0, _jquery2['default'])('#three').hasClass('x') && (0, _jquery2['default'])('#six').hasClass('x') && (0, _jquery2['default'])('#nine').hasClass('x') || (0, _jquery2['default'])('#one').hasClass('x') && (0, _jquery2['default'])('#five').hasClass('x') && (0, _jquery2['default'])('#nine').hasClass('x') || (0, _jquery2['default'])('#three').hasClass('x') && (0, _jquery2['default'])('#five').hasClass('x') && (0, _jquery2['default'])('#seven').hasClass('x')) {
+      alert('X wins has won the game. Start a new game');
+      (0, _jquery2['default'])('#game li').text('+');
+      (0, _jquery2['default'])('#game li').removeClass('disable');
+      (0, _jquery2['default'])('#game li').removeClass('o');
+      (0, _jquery2['default'])('#game li').removeClass('x');
+      (0, _jquery2['default'])('#game li').removeClass('btn-primary');
+      (0, _jquery2['default'])('#game li').removeClass('btn-info');
+    } else if (count === 9) ;
+    {
+      alert('Its a tie. It will restart.');
+      (0, _jquery2['default'])('#game li').text('+');
+      (0, _jquery2['default'])('#game li').removeClass('disable');
+      (0, _jquery2['default'])('#game li').removeClass('o');
+      (0, _jquery2['default'])('#game li').removeClass('x');
+      (0, _jquery2['default'])('#game li').removeClass('btn-primary');
+      (0, _jquery2['default'])('#game li').removeClass('btn-info');
+      count = 0;
+    }
+    //   // else if ($(this).hasClass('disable'))
+    //   // {
+    //     alert('Already selected');
+    //   }
+    //   else if (count%2 == 0);
+    //   {
+    //     count++;
+    //     $(this).text(o);
+    //       $(this).addClass('disable o btn-primary');
+    //       if ($('#one').hasClass('o') && $('#two').hasClass('o') && $('#three').hasClass('o') ||
+    //           $('#four').hasClass('o') && $('#five').hasClass('o') && $('#six').hasClass('o') ||
+    //           $('#seven').hasClass('o') && $('#eight').hasClass('o') && $('#nine').hasClass('o') ||
+    //           $('#one').hasClass('o') && $('#four').hasClass('o') && $('#seven').hasClass('o') ||
+    //           $('#two').hasClass('o') && $('#five').hasClass('o') && $('#eight').hasClass('o') ||
+    //           $('#three').hasClass('o') && $('#six').hasClass('o') && $('#nine').hasClass('o') ||
+    //           $('#one').hasClass('o') && $('#five').hasClass('o') && $('#nine').hasClass('o') ||
+    //           $('#three').hasClass('o') && $('#five').hasClass('o') && $('#seven').hasClass('o'))
+    //       {
+    //      alert('O wins')
+    //      count = 0
+    //      oWin++
+    // $('#oWin').text(oWin)
+    //         }
+    //   }
+    //    else 
+    //   {
+    //     count++
+    //     $(this).text(x)
+    //     $(this).addClass('disable x btn-info')
+    //      if ($('#one').hasClass('x') && $('#two').hasClass('x') && $('#three').hasClass('x') || $('#four').hasClass('x') && $('#five').hasClass('x') && $('#six').hasClass('x') || $('#seven').hasClass('x') && $('#eight').hasClass('x') && $('#nine').hasClass('x') || $('#one').hasClass('x') && $('#four').hasClass('x') && $('#seven').hasClass('x') || $('#two').hasClass('x') && $('#five').hasClass('x') && $('#eight').hasClass('x') || $('#three').hasClass('x') && $('#six').hasClass('x') && $('#nine').hasClass('x') || $('#one').hasClass('x') && $('#five').hasClass('x') && $('#nine').hasClass('x') || $('#three').hasClass('x') && $('#five').hasClass('x') && $('#seven').hasClass('x'))
+    //         {
+    //    alert('X wins')
+    //    count = 0
+    //    xWin++
+    //    $('#xWin').text(xWin)
+    //         }
+    //   }
+
+    //    });
+    //     $('#reset').click(function () {
+    //     $('#game li').text('+');
+    //   $('#game li').removeClass('disable')
+    //   $('#game li').removeClass('o')
+    //   $('#game li').removeClass('x')
+    //   $('#game li').removeClass('btn-primary')
+    //   $('#game li').removeClass('btn-info')
+    //   count = 0
+  });
+});
+
 },{"jquery":2,"moment":3,"underscore":4}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
